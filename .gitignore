@@ -1,0 +1,8 @@
+.idea
+
+# Build directories
+build
+build-release
+
+# Tmp folders
+Old Stuff
