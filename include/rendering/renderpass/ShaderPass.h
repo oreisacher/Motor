@@ -13,6 +13,7 @@ namespace Motor {
         ShaderPass(const std::string &inTexture, const std::string &outTexture, std::shared_ptr<ShaderInstance> shader);
 
         void execute(const FrameRenderData &frameData, RenderPassResourceRegistry &registry, GPUResourceManager &resourceManager) override;
+        void updateSize(int width, int height) override;
     private:
         std::shared_ptr<ShaderInstance> shader;
 

@@ -78,6 +78,9 @@ Window::Window(const int width, const int height, const char *title, const Rende
         if (!win)
             return;
 
+        win->width = width;
+        win->height = height;
+
         for (auto &callback : win->resizeCallback)
             callback(win, width, height);
     });

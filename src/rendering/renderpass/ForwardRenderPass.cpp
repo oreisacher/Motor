@@ -118,3 +118,5 @@ void ForwardRenderPass::execute(const FrameRenderData &frameData, RenderPassReso
 
     glBindVertexArray(0);
 }
+
+void ForwardRenderPass::updateSize(int width, int height) { }

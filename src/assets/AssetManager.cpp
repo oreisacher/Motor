@@ -31,15 +31,26 @@ AssetManager* AssetManager::getInstance() {
 }
 
 void AssetManager::init() {
+    std::vector<std::string> loadOrder = {};
+
     // Register asset loaders
     assetLoaders[typeid(ShaderSource).name()] = std::make_unique<ShaderSourceLoader>();
-    assetLoaders[typeid(Shader).name()] = std::make_unique<ShaderLoader>();
-    assetLoaders[typeid(Texture).name()] = std::make_unique<TextureLoader>();
-    assetLoaders[typeid(Material).name()] = std::make_unique<MaterialLoader>();
-    assetLoaders[typeid(Model).name()] = std::make_unique<ModelLoader>();
+    loadOrder.emplace_back(typeid(ShaderSource).name());
 
-    for (auto &loader : assetLoaders) {
-        loader.second->registerDefaultAssets();
+    assetLoaders[typeid(Shader).name()] = std::make_unique<ShaderLoader>();
+    loadOrder.emplace_back(typeid(Shader).name());
+
+    assetLoaders[typeid(Texture).name()] = std::make_unique<TextureLoader>();
+    loadOrder.emplace_back(typeid(Texture).name());
+
+    assetLoaders[typeid(Material).name()] = std::make_unique<MaterialLoader>();
+    loadOrder.emplace_back(typeid(Material).name());
+
+    assetLoaders[typeid(Model).name()] = std::make_unique<ModelLoader>();
+    loadOrder.emplace_back(typeid(Model).name());
+
+    for (auto &loader : loadOrder) {
+        assetLoaders[loader]->registerDefaultAssets();
     }
 }
 

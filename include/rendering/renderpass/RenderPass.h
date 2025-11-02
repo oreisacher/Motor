@@ -13,8 +13,10 @@ namespace Motor {
 
     class RenderPass {
     public:
-        virtual void execute(const FrameRenderData &frameData, RenderPassResourceRegistry &registry, GPUResourceManager &resourceManager) = 0;
         virtual ~RenderPass() = default;
+
+        virtual void execute(const FrameRenderData &frameData, RenderPassResourceRegistry &registry, GPUResourceManager &resourceManager) = 0;
+        virtual void updateSize(int width, int height) = 0;
     };
 }
 

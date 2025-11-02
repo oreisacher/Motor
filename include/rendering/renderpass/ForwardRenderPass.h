@@ -11,9 +11,10 @@ namespace Motor {
     class ForwardRenderPass : public RenderPass {
     public:
         ForwardRenderPass();
+        ~ForwardRenderPass() override = default;
 
         void execute(const FrameRenderData &frameData, RenderPassResourceRegistry &registry, GPUResourceManager &resourceManager) override;
-        ~ForwardRenderPass() override = default;
+        void updateSize(int width, int height) override;
 
     private:
         Material* skybox;

@@ -13,6 +13,7 @@ namespace Motor {
         CompositionPass();
 
         void execute(const FrameRenderData &frameData, RenderPassResourceRegistry &registry, GPUResourceManager &resourceManager) override;
+        void updateSize(int width, int height) override;
 
     private:
         Shader* fullscreen;

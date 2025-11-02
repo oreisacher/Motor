@@ -19,9 +19,7 @@ SkyboxPass::SkyboxPass() {
 
 void SkyboxPass::execute(const FrameRenderData &frameData, RenderPassResourceRegistry &registry, GPUResourceManager &resourceManager) {
     glBindFramebuffer(GL_FRAMEBUFFER, registry.get("sceneFBO"));
-
-    auto activeWindow = WindowManager::GetActiveWindow();
-    glViewport(0, 0, activeWindow->getWidth(), activeWindow->getHeight());
+    glViewport(0, 0, width, height);
 
     glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -53,4 +51,9 @@ void SkyboxPass::execute(const FrameRenderData &frameData, RenderPassResourceReg
 
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_CULL_FACE);
+}
+
+void SkyboxPass::updateSize(int width, int height) {
+    this->width = width;
+    this->height = height;
 }

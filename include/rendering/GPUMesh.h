@@ -6,6 +6,7 @@
 #define MOTOR_GPUMESH_H
 
 #include "GPUResource.h"
+#include <cstddef>
 
 namespace Motor {
     class GPUMesh : public GPUResource {

@@ -36,34 +36,7 @@ bool OpenGLRenderer::init() {
     glEnable(GL_CULL_FACE);
 
     auto activeWindow = WindowManager::GetActiveWindow();
-
-    // Global Scene Framebuffer
-    glGenFramebuffers(1, &sceneFBO);
-    glBindFramebuffer(GL_FRAMEBUFFER, sceneFBO);
-
-    glGenTextures(1, &sceneColorTex);
-    glBindTexture(GL_TEXTURE_2D, sceneColorTex);
-
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA16F, activeWindow->getWidth(), activeWindow->getHeight(), 0, GL_RGBA, GL_FLOAT, nullptr);
-
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-
-    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, sceneColorTex, 0);
-
-    glGenRenderbuffers(1, &sceneDepthRBO);
-    glBindRenderbuffer(GL_RENDERBUFFER, sceneDepthRBO);
-
-    glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH24_STENCIL8, activeWindow->getWidth(), activeWindow->getHeight());
-    glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_STENCIL_ATTACHMENT, GL_RENDERBUFFER, sceneDepthRBO);
-
-    glBindFramebuffer(GL_FRAMEBUFFER, 0);
-
-    registry.set("sceneFBO", sceneFBO);
-    registry.set("sceneColorTex", sceneColorTex);
-    registry.set("sceneDepthRBO", sceneDepthRBO);
+    recreateFramebuffer(activeWindow->getWidth(), activeWindow->getHeight());
 
     // Setup render passes
     auto blurShader = AssetManager::getInstance()->load<Shader>("motor://shaders/blur.shader");
@@ -105,6 +78,13 @@ void OpenGLRenderer::render(Scene* scene) {
     for (auto& pass : renderPasses) {
         pass->execute(frameData, registry, resourceManager);
     }
+}
+
+void OpenGLRenderer::updateWindowSize(const int width, const int height) {
+    recreateFramebuffer(width, height);
+
+    for (auto& pass : renderPasses)
+        pass->updateSize(width, height);
 }
 
 void OpenGLRenderer::processScene(SceneNode *node, FrameRenderData &frameData) {
@@ -166,4 +146,39 @@ void OpenGLRenderer::findActiveCamera(FrameRenderData &frameData) {
             return;
         }
     }
+}
+
+void OpenGLRenderer::recreateFramebuffer(const int width, const int height) {
+    if (sceneColorTex) glDeleteTextures(1, &sceneColorTex);
+    if (sceneDepthRBO) glDeleteRenderbuffers(1, &sceneDepthRBO);
+    if (sceneFBO) glDeleteFramebuffers(1, &sceneFBO);
+
+    // Global Scene Framebuffer
+    glGenFramebuffers(1, &sceneFBO);
+    glBindFramebuffer(GL_FRAMEBUFFER, sceneFBO);
+
+    glGenTextures(1, &sceneColorTex);
+    glBindTexture(GL_TEXTURE_2D, sceneColorTex);
+
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA16F, width, height, 0, GL_RGBA, GL_FLOAT, nullptr);
+
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+
+    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, sceneColorTex, 0);
+
+    glGenRenderbuffers(1, &sceneDepthRBO);
+    glBindRenderbuffer(GL_RENDERBUFFER, sceneDepthRBO);
+
+    glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH24_STENCIL8, width, height);
+    glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_STENCIL_ATTACHMENT, GL_RENDERBUFFER, sceneDepthRBO);
+
+    glBindFramebuffer(GL_FRAMEBUFFER, 0);
+
+    // Update registry
+    registry.set("sceneFBO", sceneFBO);
+    registry.set("sceneColorTex", sceneColorTex);
+    registry.set("sceneDepthRBO", sceneDepthRBO);
 }

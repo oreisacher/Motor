@@ -46,9 +46,12 @@ namespace Motor {
 
         void render(Scene* scene) override;
 
+        void updateWindowSize(int width, int height);
+
     private:
         void processScene(SceneNode* node, FrameRenderData& frameData);
         void findActiveCamera(FrameRenderData& frameData);
+        void recreateFramebuffer(int width, int height);
 
         GPUResourceManager resourceManager;
         std::vector<std::unique_ptr<RenderPass>> renderPasses;

@@ -11,13 +11,16 @@ namespace Motor {
     class SkyboxPass : public RenderPass {
     public:
         SkyboxPass();
+        ~SkyboxPass() override = default;
 
         void execute(const FrameRenderData &frameData, RenderPassResourceRegistry &registry, GPUResourceManager &resourceManager) override;
-        ~SkyboxPass() override = default;
+        void updateSize(int width, int height) override;
 
     private:
         Material* skybox;
         Mesh* skyboxMesh;
+
+        int width = 0, height = 0;
     };
 }
 

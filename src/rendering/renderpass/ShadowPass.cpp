@@ -9,6 +9,7 @@
 #include "glad/gl.h"
 #include "rendering/OpenGLRenderer.h"
 #include "utils/ShaderUniformHelper.h"
+#include <format>
 
 using namespace Motor;
 
@@ -97,3 +98,5 @@ void ShadowPass::execute(const FrameRenderData &frameData, RenderPassResourceReg
 
     glBindVertexArray(0);
 }
+
+void ShadowPass::updateSize(int width, int height) { }

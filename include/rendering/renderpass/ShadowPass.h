@@ -14,6 +14,7 @@ namespace Motor {
         ~ShadowPass();
 
         void execute(const FrameRenderData &frameData, RenderPassResourceRegistry &registry, GPUResourceManager &resourceManager) override;
+        void updateSize(int width, int height) override;
 
     private:
         int resolution = 1024;

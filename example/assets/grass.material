@@ -1,0 +1,22 @@
+{
+    "name" : "grass",
+    "baseColor" : [ 1.0, 1.0, 1.0 ],
+    "shader" : "motor://shaders/defaultLit.shader",
+    "textures" : [
+        {
+            "name" : "diffuse0",
+            "type" : "diffuse",
+            "path" : "textures/forest_leaves_02_diffuse_4k.jpg"
+        },
+        {
+            "name" : "roughness0",
+            "type" : "roughness",
+            "path" : "textures/forest_leaves_02_rough_4k.jpg"
+        },
+        {
+            "name" : "normal0",
+            "type" : "normal",
+            "path" : "textures/forest_leaves_02_nor_gl_4k.jpg"
+        }
+    ]
+}

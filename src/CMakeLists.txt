@@ -4,7 +4,6 @@ project(Motor)
 
 # Compile library
 add_library(Motor STATIC
-        Motor.cpp
         core/SceneNode.cpp
         core/Scene.cpp
         assets/Asset.cpp
@@ -68,8 +67,15 @@ target_link_libraries(Motor
         PUBLIC assimp
         PUBLIC glfw
         PUBLIC libzstd_static
-        PUBLIC opengl32
+        PUBLIC glm
 )
+
+if(UNIX)
+    find_package(OpenGL REQUIRED)
+    target_link_libraries(Motor PUBLIC OpenGL::GL)
+elseif(WIN32)
+    target_link_libraries(Motor PUBLIC opengl32)
+endif()
 
 # Build Asset Packer tool
 add_executable(AssetPacker
@@ -85,3 +91,6 @@ target_link_libraries(AssetPacker
 )
 
 add_dependencies(Motor AssetPacker)
+
+set(ASSET_PACKER_EXECUTABLE $<TARGET_FILE:AssetPacker> CACHE FILEPATH "Path to AssetPacker executable")
+message(STATUS "AssetPacker path: ${ASSET_PACKER_EXECUTABLE}")

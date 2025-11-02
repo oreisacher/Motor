@@ -6,6 +6,7 @@
 
 #include "assets/AssetManager.h"
 #include "glad/gl.h"
+#include "GLFW/glfw3.h"
 #include "rendering/WindowManager.h"
 #include "utils/ShaderUniformHelper.h"
 
@@ -49,3 +50,5 @@ void CompositionPass::execute(const FrameRenderData &frameData, RenderPassResour
 
     glEnable(GL_DEPTH_TEST);
 }
+
+void CompositionPass::updateSize(int width, int height) { }
