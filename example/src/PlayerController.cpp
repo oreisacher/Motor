@@ -62,6 +62,10 @@ void PlayerController::update(float deltaTime) {
         node->setRotation(glm::degrees(glm::eulerAngles(smoothRot)));
     }
 
+    /*
+     *  Notice the note in main.cpp about animated characters
+     *
+
     if (currentlyMoving && !isMoving) {
         // Movement just started → play animation
         animator->setAnimation("walk");
@@ -69,6 +73,7 @@ void PlayerController::update(float deltaTime) {
         // Movement just stopped → pause animation
         animator->setAnimation("idle");
     }
+    */
 
     // Update movement state for next frame
     isMoving = currentlyMoving;

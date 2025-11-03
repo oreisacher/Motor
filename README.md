@@ -1,0 +1,21 @@
+# Motor Game Engine
+
+A small OpenGL game engine that began as a uni project.
+
+## Features
+- Load and render 3D models
+- Scene graph with hierarchical nodes
+- Component-based nodes for easy extension
+- PBR materials
+- Lights (Spot, Point, Directional)
+- Multi-Window support
+- Automatic mesh instancing
+- Basic animation support
+- Input manager for handling keyboard and mouse controls
+
+## Planned
+- Physics and collision system
+- Editor tools and debugging utilities
+- Optimized node tree updates for better performance
+- Improved animation system with support for separate animation files
+

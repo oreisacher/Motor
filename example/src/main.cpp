@@ -151,7 +151,7 @@ int main() {
 
     auto characterNode = new ModelNode("Character");
     characterNode->setModelInstance(characterInstance.get());
-    characterNode->setScale({100.0f, 100.0f, 100.0f});
+    characterNode->setScale({0.5f, 0.5f, 0.5f});
     characterNode->setPosition({ 0.0f, 0.0f, 5.0f});
     characterNode->setRotation({ 0.0f, 180.0f, 0.0f});
     worldRoot->addChild(characterNode);
@@ -160,10 +160,17 @@ int main() {
     cameraTargetNode->setPosition({ 0.0f, 0.017f, 0.0f });
     characterNode->addChild(cameraTargetNode);
 
+    /*
+     * This character could be animated using an Animator component.
+     * You could load animations such as idle, walk, run, attack, etc.
+     * Models with such animations can be found on website such as Mixamo.
+     *
+
     characterNode->addComponent(std::make_unique<Animator>());
     auto animator = characterNode->getComponent<Animator>();
     animator->setAnimation("idle");
     animator->setState(Animator::PLAYING);
+    */
 
     // Light
     auto spotLight = new LightNode("PointLight", LightNode::Type::SPOT);
@@ -184,7 +191,9 @@ int main() {
 
     characterNode->addComponent(std::make_unique<PlayerController>());
     characterNode->getComponent<PlayerController>()->camera = camera;
-    characterNode->getComponent<PlayerController>()->animator = animator;
+
+    // Notice the above note about animations
+    // characterNode->getComponent<PlayerController>()->animator = animator;
 
     mainWindow->addResizeCallback([&](Window* window, int width, int height) {
         camera->setAspect((float)width / (float)height);
