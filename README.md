@@ -12,6 +12,7 @@ A small OpenGL game engine that began as a uni project.
 - Automatic mesh instancing
 - Basic animation support
 - Input manager for handling keyboard and mouse controls
+- Custom resource file format to bundle and ship game assets
 
 ## Planned
 - Physics and collision system
