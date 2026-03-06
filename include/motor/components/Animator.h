@@ -5,8 +5,8 @@
 #ifndef MOTOR_ANIMATOR_H
 #define MOTOR_ANIMATOR_H
 
-#include <assets/Animation.h>
-#include <assets/Model.h>
+#include <motor/assets/Animation.h>
+#include <motor/assets/Model.h>
 
 #include "Component.h"
 

@@ -5,10 +5,11 @@
 #ifndef MOTOR_MESH_H
 #define MOTOR_MESH_H
 
+#include <motor/utils/Logger.h>
+
 #include <glm/glm.hpp>
 #include <iostream>
 #include <vector>
-#include <utils/Logger.h>
 
 #include "Material.h"
 

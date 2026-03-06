@@ -5,7 +5,7 @@
 #ifndef MOTOR_IRENDERER_H
 #define MOTOR_IRENDERER_H
 
-#include <core/Scene.h>
+#include <motor/core/Scene.h>
 
 namespace Motor {
     class IRenderer {

@@ -2,9 +2,8 @@
 // Created by Orik on 22/09/2025.
 //
 
-
-
-
+#include <motor/assets/AssetManager.h>
+#include <motor/assets/loaders/AssetLoader.h>
 #include <motor/assets/loaders/ShaderSourceLoader.h>
 
 #include <fstream>

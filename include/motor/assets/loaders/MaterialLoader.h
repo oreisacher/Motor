@@ -5,7 +5,7 @@
 #ifndef MOTOR_MATERIALLOADER_H
 #define MOTOR_MATERIALLOADER_H
 
-#include <assets/Material.h>
+#include <motor/assets/Material.h>
 #include "AssetLoader.h"
 
 namespace Motor {

@@ -2,6 +2,7 @@
 // Created by Orik on 21/09/2025.
 //
 
+#include <motor/assets/AssetManager.h>
 #include <motor/assets/loaders/ShaderLoader.h>
 #include <motor/utils/Logger.h>
 

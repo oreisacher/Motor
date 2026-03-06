@@ -5,12 +5,13 @@
 #ifndef MOTOR_GPURESOURCEMANAGER_H
 #define MOTOR_GPURESOURCEMANAGER_H
 
+#include <motor/assets/Mesh.h>
+#include <motor/assets/Shader.h>
+#include <motor/assets/Texture.h>
+
 #include <memory>
 #include <string>
 #include <unordered_map>
-#include <assets/Mesh.h>
-#include <assets/Shader.h>
-#include <assets/Texture.h>
 
 #include "GPUMesh.h"
 #include "GPUResource.h"

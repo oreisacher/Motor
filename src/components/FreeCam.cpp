@@ -4,7 +4,7 @@
 
 #include <motor/components/FreeCam.h>
 #include <motor/core/InputManager.h>
-#include <motor/core/SceneNode.h>
+#include <../../include/motor/core/SceneNode.h>
 
 #include <iostream>
 #include <ostream>

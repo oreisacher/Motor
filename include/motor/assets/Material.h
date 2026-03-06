@@ -5,9 +5,10 @@
 #ifndef MOTOR_MATERIAL_H
 #define MOTOR_MATERIAL_H
 
+#include <motor/core/ShaderInstance.h>
+#include <motor/assets/Texture.h>
+
 #include <memory>
-#include <core/ShaderInstance.h>
-#include <assets/Texture.h>
 #include <glm/glm.hpp>
 #include <map>
 

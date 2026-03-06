@@ -5,7 +5,7 @@
 #ifndef MOTOR_MODELINSTANCE_H
 #define MOTOR_MODELINSTANCE_H
 
-#include "assets/Model.h"
+#include <motor/assets/Model.h>
 
 namespace Motor {
     class ModelInstance {

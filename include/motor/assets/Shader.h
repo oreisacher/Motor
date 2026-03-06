@@ -5,9 +5,10 @@
 #ifndef MOTOR_SHADER_H
 #define MOTOR_SHADER_H
 
+#include <motor/core/ShaderInstance.h>
+
 #include <map>
 #include <memory>
-#include <core/ShaderInstance.h>
 
 #include "Asset.h"
 #include "ShaderSource.h"

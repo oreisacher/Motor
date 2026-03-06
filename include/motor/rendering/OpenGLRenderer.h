@@ -5,13 +5,12 @@
 #ifndef MOTOR_OPENGLRENDERER_H
 #define MOTOR_OPENGLRENDERER_H
 
-#include <core/CameraNode.h>
-#include <rendering/IRenderer.h>
-
-#include "GPUResourceManager.h"
-#include "RenderCommand.h"
-#include "renderpass/RenderPass.h"
-#include "core/LightNode.h"
+#include <motor/core/CameraNode.h>
+#include <motor/rendering/IRenderer.h>
+#include <motor/rendering/GPUResourceManager.h>
+#include <motor/rendering/RenderCommand.h>
+#include <motor/rendering/renderpass/RenderPass.h>
+#include <motor/core/LightNode.h>
 
 namespace Motor {
     struct BatchKey {

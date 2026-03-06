@@ -7,6 +7,7 @@
 
 #include <assimp/IOStream.hpp>
 #include <assimp/IOSystem.hpp>
+#include "BenzinLoader.h"
 
 namespace Motor {
     class BenzinIOStream : public Assimp::IOStream {

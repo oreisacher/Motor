@@ -2,6 +2,7 @@
 // Created by Orik on 09/10/2025.
 //
 
+#include <motor/assets/AssetManager.h>
 #include <motor/assets/loaders/ModelLoader.h>
 #include <motor/utils/AssimpConverts.h>
 #include <motor/SkyboxCubeData.h>

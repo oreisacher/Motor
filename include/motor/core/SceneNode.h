@@ -5,10 +5,11 @@
 #ifndef MOTOR_SCENENODE_H
 #define MOTOR_SCENENODE_H
 
+#include <motor/components/Component.h>
+
 #include <memory>
 #include <string>
 #include <vector>
-#include <components/Component.h>
 #include <glm/glm.hpp>
 #include <glm/gtc/quaternion.hpp>
 

@@ -5,8 +5,8 @@
 #ifndef MOTOR_RENDERPASS_H
 #define MOTOR_RENDERPASS_H
 
-#include "../RenderPassResourceRegistry.h"
-#include <rendering/GPUResourceManager.h>
+#include <motor/rendering/RenderPassResourceRegistry.h>
+#include <motor/rendering/GPUResourceManager.h>
 
 namespace Motor {
     struct FrameRenderData;

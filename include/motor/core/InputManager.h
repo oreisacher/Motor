@@ -5,7 +5,7 @@
 #ifndef MOTOR_INPUTMANAGER_H
 #define MOTOR_INPUTMANAGER_H
 
-#include <rendering/Window.h>
+#include <motor/rendering/Window.h>
 
 namespace Motor {
     class InputManager {

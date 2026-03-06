@@ -5,9 +5,9 @@
 #ifndef MOTOR_RENDERCOMMAND_H
 #define MOTOR_RENDERCOMMAND_H
 
-#include <assets/Mesh.h>
-#include <assets/Material.h>
-#include <assets/Model.h>
+#include <motor/assets/Mesh.h>
+#include <motor/assets/Material.h>
+#include <motor/assets/Model.h>
 #include <glm/glm.hpp>
 
 namespace Motor {

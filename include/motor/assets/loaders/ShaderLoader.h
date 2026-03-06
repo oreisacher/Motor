@@ -5,7 +5,7 @@
 #ifndef MOTOR_SHADERLOADER_H
 #define MOTOR_SHADERLOADER_H
 
-#include <assets/Shader.h>
+#include <motor/assets/Shader.h>
 #include "AssetLoader.h"
 
 namespace Motor {

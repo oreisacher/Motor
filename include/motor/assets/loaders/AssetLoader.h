@@ -5,9 +5,9 @@
 #ifndef MOTOR_ASSETLOADER_H
 #define MOTOR_ASSETLOADER_H
 
-#include <utils/Logger.h>
-#include <assets/Asset.h>
-#include <assets/AssetManager.h>
+#include <motor/utils/Logger.h>
+#include <motor/assets/Asset.h>
+// #include <motor/assets/AssetManager.h>
 
 namespace Motor {
     class AssetManager;

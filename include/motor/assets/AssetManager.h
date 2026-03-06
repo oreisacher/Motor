@@ -5,20 +5,21 @@
 #ifndef MOTOR_ASSETMANAGER_H
 #define MOTOR_ASSETMANAGER_H
 
+#include <motor/utils/Logger.h>
+#include <motor/assets/loaders/AssetLoader.h>
+
 #include <filesystem>
 #include <iostream>
 #include <memory>
 #include <string>
 #include <unordered_map>
 #include <typeindex>
-#include <utils/Logger.h>
 
 #include "Asset.h"
 #include "BenzinLoader.h"
-#include "loaders/AssetLoader.h"
 
 namespace Motor {
-    class AssetLoader;
+    // class AssetLoader;
 
     class AssetManager {
     public:

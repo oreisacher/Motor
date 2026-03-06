@@ -5,9 +5,10 @@
 #ifndef MOTOR_SCENE_H
 #define MOTOR_SCENE_H
 
+#include <motor/assets/Material.h>
+
 #include <memory>
 #include "SceneNode.h"
-#include "assets/Material.h"
 
 namespace Motor {
     class Scene {

@@ -1,12 +1,13 @@
 #ifndef MOTOR_SHADERINSTANCE_H
 #define MOTOR_SHADERINSTANCE_H
 
+#include <motor/utils/Logger.h>
+
 #include <map>
 #include <memory>
 #include <any>
 #include <optional>
 #include <string>
-#include <utils/Logger.h>
 
 namespace Motor {
     using UniformValue = std::any;

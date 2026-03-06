@@ -5,7 +5,7 @@
 #ifndef MOTOR_MODENODE_H
 #define MOTOR_MODENODE_H
 
-#include <assets/ModelInstance.h>
+#include <motor/assets/ModelInstance.h>
 #include "SceneNode.h"
 
 namespace Motor {

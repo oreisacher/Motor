@@ -5,9 +5,8 @@
 #ifndef MOTOR_MODELLOADER_H
 #define MOTOR_MODELLOADER_H
 
-#include <assets/Model.h>
+#include <motor/assets/Model.h>
 #include <assimp/scene.h>
-
 #include "AssetLoader.h"
 
 namespace Motor {
