@@ -20,10 +20,19 @@ A small OpenGL game engine that began as a uni project.
 - Optimized node tree updates for better performance
 - Improved animation system with support for separate animation files
 
-## Build Example Project
+## Build Motor Engine
 ```bash
 git clone https://github.com/oreisacher/Motor.git
 cd Motor
+mkdir build && cd build
+cmake ..
+make Motor
+```
+
+## Build Example Project
+```bash
+git clone https://github.com/oreisacher/Motor.git
+cd Motor/example
 mkdir build && cd build
 cmake ..
 make Example
