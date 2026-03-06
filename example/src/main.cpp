@@ -8,6 +8,7 @@
 
 #include "OrbitCamera.h"
 #include "PlayerController.h"
+#include "motor/rendering/pipeline/DefaultPipeline.h"
 #include "motor/components/Animator.h"
 #include "motor/core/InputManager.h"
 #include "motor/core/ModelNode.h"
@@ -43,6 +44,10 @@ int main() {
     // ----------------------
     OpenGLRenderer renderer;
     renderer.init();
+
+    auto defaultPipeline = DefaultPipeline::Create();
+    renderer.setPipeline(defaultPipeline.get());
+
     renderer.updateWindowSize(mainWindow->getWidth(), mainWindow->getHeight());
 
     mainWindow->addResizeCallback([&](Window* window, int width, int height) {

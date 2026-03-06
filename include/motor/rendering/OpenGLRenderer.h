@@ -12,6 +12,8 @@
 #include <motor/rendering/renderpass/RenderPass.h>
 #include <motor/core/LightNode.h>
 
+#include "pipeline/RenderPipeline.h"
+
 namespace Motor {
     struct BatchKey {
         const Mesh* mesh;
@@ -29,12 +31,12 @@ namespace Motor {
     };
 
     struct FrameRenderData {
-        std::unordered_map<const Mesh*, const ModelInstance*> meshModelInstanceLookup;
+        std::unordered_map<const Mesh*, const ModelInstance*> meshModelInstanceLookup = {};
 
-        std::unordered_map<BatchKey, RenderCommand, BatchKeyHasher> batchedCommands;
-        std::vector<LightNode*> lights;
+        std::unordered_map<BatchKey, RenderCommand, BatchKeyHasher> batchedCommands = {};
+        std::vector<LightNode*> lights = {};
 
-        std::vector<CameraNode*> cameras;
+        std::vector<CameraNode*> cameras = {};
         int activeCamera = -1;
     };
 
@@ -42,6 +44,8 @@ namespace Motor {
     public:
         bool init() override;
         void shutdown() override;
+
+        void setPipeline(RenderPipeline* pl);
 
         void render(Scene* scene) override;
 
@@ -53,7 +57,7 @@ namespace Motor {
         void recreateFramebuffer(int width, int height);
 
         GPUResourceManager resourceManager;
-        std::vector<std::unique_ptr<RenderPass>> renderPasses;
+        RenderPipeline* pipeline = nullptr;
 
         RenderPassResourceRegistry registry;
 

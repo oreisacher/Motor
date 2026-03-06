@@ -47,6 +47,9 @@ add_library(Motor STATIC
     rendering/renderpass/SkyboxPass.cpp
     rendering/renderpass/CompositionPass.cpp
     rendering/renderpass/ShaderPass.cpp
+    rendering/renderpass/FullscreenPass.cpp
+    rendering/pipeline/RenderPipeline.cpp
+    rendering/pipeline/DefaultPipeline.cpp
 )
 
 target_include_directories(Motor

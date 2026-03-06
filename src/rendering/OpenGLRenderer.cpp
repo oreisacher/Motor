@@ -35,55 +35,34 @@ bool OpenGLRenderer::init() {
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_CULL_FACE);
 
-    auto activeWindow = WindowManager::GetActiveWindow();
-    recreateFramebuffer(activeWindow->getWidth(), activeWindow->getHeight());
-
-    // Setup render passes
-    auto blurShader = AssetManager::getInstance()->load<Shader>("motor://shaders/blur.shader");
-    auto xBlur = std::make_shared<ShaderInstance>(blurShader);
-    xBlur->setUniform("horizontal", false);
-    auto yBlur = std::make_shared<ShaderInstance>(blurShader);
-    yBlur->setUniform("horizontal", true);
-
-    renderPasses.push_back(std::make_unique<ShadowPass>());
-    renderPasses.push_back(std::make_unique<SkyboxPass>());
-    renderPasses.push_back(std::make_unique<ForwardRenderPass>());
-    renderPasses.push_back(std::make_unique<ShaderPass>(
-        "sceneFBO",
-        "brightThresholdTexture",
-        AssetManager::getInstance()->load<Shader>("motor://shaders/brightThreshold.shader")->getDefaultInstance()));
-    renderPasses.push_back(std::make_unique<ShaderPass>(
-            "brightThresholdTexture",
-            "blurredThresholdXTexture",
-            xBlur));
-    renderPasses.push_back(std::make_unique<ShaderPass>(
-            "blurredThresholdXTexture",
-            "blurredThresholdTexture",
-            yBlur));
-    renderPasses.push_back(std::make_unique<CompositionPass>());
-
     return true;
 }
 
 void OpenGLRenderer::shutdown() { }
 
+void OpenGLRenderer::setPipeline(RenderPipeline* pl) { pipeline = pl; }
+
 void OpenGLRenderer::render(Scene* scene) {
+    if (!pipeline) return;
+
     FrameRenderData frameData;
-    processScene(scene->getRoot(), frameData);
-    findActiveCamera(frameData);
 
-    if (frameData.activeCamera == -1)
-        return;
+    if (scene) {
+        processScene(scene->getRoot(), frameData);
+        findActiveCamera(frameData);
+    }
 
-    for (auto& pass : renderPasses) {
+    for (auto& pass : pipeline->getPasses()) {
         pass->execute(frameData, registry, resourceManager);
     }
 }
 
 void OpenGLRenderer::updateWindowSize(const int width, const int height) {
+    if (!pipeline) return;
+
     recreateFramebuffer(width, height);
 
-    for (auto& pass : renderPasses)
+    for (auto& pass : pipeline->getPasses())
         pass->updateSize(width, height);
 }
 
