@@ -4,10 +4,12 @@
 
 #include "motor/rendering/pipeline/RenderPipeline.h"
 
-void RenderPipeline::addPass(std::unique_ptr<Motor::RenderPass> pass) {
+using namespace Motor;
+
+void RenderPipeline::addPass(std::unique_ptr<RenderPass> pass) {
     passes.push_back(std::move(pass));
 }
 
-const std::vector<std::unique_ptr<Motor::RenderPass>>& RenderPipeline::getPasses() const {
+const std::vector<std::unique_ptr<RenderPass>>& RenderPipeline::getPasses() const {
     return passes;
 }

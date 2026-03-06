@@ -8,13 +8,15 @@
 #include "motor/rendering/renderpass/RenderPass.h"
 #include <memory>
 
-class RenderPipeline {
-public:
-    void addPass(std::unique_ptr<Motor::RenderPass> pass);
-    const std::vector<std::unique_ptr<Motor::RenderPass>>& getPasses() const;
+namespace Motor {
+    class RenderPipeline {
+    public:
+        void addPass(std::unique_ptr<RenderPass> pass);
+        const std::vector<std::unique_ptr<RenderPass>>& getPasses() const;
 
-private:
-    std::vector<std::unique_ptr<Motor::RenderPass>> passes;
-};
+    private:
+        std::vector<std::unique_ptr<RenderPass>> passes;
+    };
+}
 
 #endif //MOTOR_RENDERPIPELINE_H
