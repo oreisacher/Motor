@@ -7,11 +7,18 @@
 #include "glad/gl.h"
 
 Motor::FullscreenPass::FullscreenPass(Shader* shr) {
-    shader = shr;
+    setShader(shr);
+
     glGenVertexArrays(1, &vao);
 }
 
+void Motor::FullscreenPass::setShader(Shader* shr) {
+    shader = shr;
+}
+
 void Motor::FullscreenPass::execute(const FrameRenderData& frameData, RenderPassResourceRegistry& registry, GPUResourceManager& resourceManager) {
+    if (!shader) return;
+
     glBindFramebuffer(GL_FRAMEBUFFER, 0);
     glDisable(GL_DEPTH_TEST);
 

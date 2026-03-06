@@ -12,7 +12,9 @@ namespace Motor {
 
     class FullscreenPass : public Motor::RenderPass {
     public:
-        FullscreenPass(Shader* shr);
+        FullscreenPass(Shader* shr = nullptr);
+
+        void setShader(Shader* shr);
 
         void execute(const FrameRenderData& frameData, RenderPassResourceRegistry& registry, GPUResourceManager& resourceManager) override;
         void updateSize(int width, int height) override;
