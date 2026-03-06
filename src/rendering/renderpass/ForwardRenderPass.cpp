@@ -2,15 +2,14 @@
 // Created by Orik on 23/10/2025.
 //
 
-#include "rendering/renderpass/ForwardRenderPass.h"
-#include "rendering/OpenGLRenderer.h"
-#include "rendering/WindowManager.h"
-#include "utils/ShaderUniformHelper.h"
+#include <motor/rendering/renderpass/ForwardRenderPass.h>
+#include <motor/rendering/OpenGLRenderer.h>
+#include <motor/rendering/WindowManager.h>
+#include <motor/utils/ShaderUniformHelper.h>
+#include <motor/assets/AssetManager.h>
+#include <motor/assets/ModelInstance.h>
 
 #include <format>
-
-#include "assets/AssetManager.h"
-#include "assets/ModelInstance.h"
 
 using namespace Motor;
 

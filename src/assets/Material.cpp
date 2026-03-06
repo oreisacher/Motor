@@ -2,10 +2,9 @@
 // Created by Orik on 21/09/2025.
 //
 
-#include "assets/Material.h"
-
-#include <assets/Shader.h>
-#include <utils/UUIDHelper.h>
+#include <motor/assets/Material.h>
+#include <motor/assets/Shader.h>
+#include <motor/utils/UUIDHelper.h>
 
 using namespace Motor;
 

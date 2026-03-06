@@ -2,7 +2,7 @@
 // Created by Orik on 16/10/2025.
 //
 
-#include "rendering/GPUMesh.h"
+#include <motor/rendering/GPUMesh.h>
 #include <glad/gl.h>
 
 using namespace Motor;

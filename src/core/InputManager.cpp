@@ -2,9 +2,8 @@
 // Created by Orik on 17/10/2025.
 //
 
-#include "core/InputManager.h"
 
-#include <iostream>
+#include <motor/core/InputManager.h>
 
 using namespace Motor;
 

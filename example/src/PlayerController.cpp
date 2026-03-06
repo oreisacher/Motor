@@ -4,11 +4,11 @@
 
 #include "PlayerController.h"
 
-#include <components/Animator.h>
-#include <core/InputManager.h>
-#include <core/SceneNode.h>
+#include <motor/components/Animator.h>
+#include <motor/core/InputManager.h>
+#include <motor/core/SceneNode.h>
 #include <glm/glm.hpp>
-#include <rendering/Window.h>
+#include <motor/rendering/Window.h>
 
 void PlayerController::init() {
     animator = node->getComponent<Motor::Animator>();

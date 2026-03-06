@@ -2,16 +2,16 @@
 // Created by Orik on 09/10/2025.
 //
 
-#include "assets/loaders/ModelLoader.h"
+#include <motor/assets/loaders/ModelLoader.h>
+#include <motor/utils/AssimpConverts.h>
+#include <motor/SkyboxCubeData.h>
+#include <motor/assets/BenzinAssimpAdapter.h>
+#include <motor/assets/Shader.h>
 
 #include <assimp/Importer.hpp>
 #include <assimp/postprocess.h>
-#include <assets/BenzinAssimpAdapter.h>
-#include <assets/Shader.h>
-#include <utils/AssimpConverts.h>
 #include <format>
 
-#include "SkyboxCubeData.h"
 #include "stb_image.h"
 
 using namespace Motor;

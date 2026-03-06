@@ -2,8 +2,7 @@
 // Created by Orik on 21/09/2025.
 //
 
-#include "assets/Shader.h"
-
+#include <motor/assets/Shader.h>
 #include <iostream>
 #include <ostream>
 

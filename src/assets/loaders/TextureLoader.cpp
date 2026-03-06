@@ -2,8 +2,8 @@
 // Created by Orik on 21/09/2025.
 //
 
-#include "assets/loaders/TextureLoader.h"
-#include <utils/Logger.h>
+#include <motor/assets/loaders/TextureLoader.h>
+#include <motor/utils/Logger.h>
 #include <filesystem>
 
 #define STB_IMAGE_IMPLEMENTATION

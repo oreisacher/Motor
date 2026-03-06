@@ -2,7 +2,7 @@
 // Created by Orik on 20/09/2025.
 //
 
-#include "utils/Logger.h"
+#include <motor/utils/Logger.h>
 
 #include <chrono>
 #include <filesystem>

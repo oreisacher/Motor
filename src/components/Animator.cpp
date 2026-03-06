@@ -2,10 +2,9 @@
 // Created by Orik on 20/10/2025.
 //
 
-#include "components/Animator.h"
-
+#include <motor/components/Animator.h>
+#include <motor/core/ModelNode.h>
 #include <format>
-#include <core/ModelNode.h>
 
 #define GLM_ENABLE_EXPERIMENTAL
 #include <glm/gtc/quaternion.hpp>

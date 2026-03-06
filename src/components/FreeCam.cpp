@@ -2,12 +2,12 @@
 // Created by Orik on 20/10/2025.
 //
 
-#include "components/FreeCam.h"
+#include <motor/components/FreeCam.h>
+#include <motor/core/InputManager.h>
+#include <motor/core/SceneNode.h>
 
 #include <iostream>
 #include <ostream>
-#include <core/InputManager.h>
-#include <core/SceneNode.h>
 #include <glm/glm.hpp>
 
 using namespace Motor;

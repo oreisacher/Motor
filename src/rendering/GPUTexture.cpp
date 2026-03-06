@@ -2,7 +2,7 @@
 // Created by Orik on 16/10/2025.
 //
 
-#include "rendering/GPUTexture.h"
+#include <motor/rendering/GPUTexture.h>
 #include <glad/gl.h>
 
 using namespace Motor;

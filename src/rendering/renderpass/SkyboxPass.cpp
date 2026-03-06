@@ -2,13 +2,13 @@
 // Created by Orik on 24/10/2025.
 //
 
-#include "rendering/renderpass/SkyboxPass.h"
+#include <motor/rendering/renderpass/SkyboxPass.h>
+#include <motor/rendering/OpenGLRenderer.h>
+#include <motor/rendering/WindowManager.h>
+#include <motor/assets/AssetManager.h>
+#include <motor/utils/ShaderUniformHelper.h>
 
-#include "assets/AssetManager.h"
 #include "glad/gl.h"
-#include "rendering/OpenGLRenderer.h"
-#include "rendering/WindowManager.h"
-#include "utils/ShaderUniformHelper.h"
 
 using namespace Motor;
 

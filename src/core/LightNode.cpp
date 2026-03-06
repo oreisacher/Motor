@@ -2,8 +2,7 @@
 // Created by Orik on 22/10/2025.
 //
 
-#include "core/LightNode.h"
-
+#include <motor/core/LightNode.h>
 #include <format>
 
 using namespace Motor;

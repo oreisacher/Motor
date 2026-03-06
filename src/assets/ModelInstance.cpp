@@ -2,8 +2,8 @@
 // Created by Orik on 24/10/2025.
 //
 
-#include "assets/ModelInstance.h"
-#include <assets/Model.h>
+#include <motor/assets/ModelInstance.h>
+#include <motor/assets/Model.h>
 
 using namespace Motor;
 

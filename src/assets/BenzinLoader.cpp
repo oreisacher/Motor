@@ -4,11 +4,11 @@
 
 #define MINIZ_HEADER_FILE_ONLY
 
-#include "assets/BenzinLoader.h"
+#include <motor/assets/BenzinLoader.h>
+#include <motor/utils/Logger.h>
 #include <filesystem>
 #include <fstream>
 #include <iostream>
-#include <utils/Logger.h>
 #include <zstd.h>
 
 using namespace Motor;

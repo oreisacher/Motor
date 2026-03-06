@@ -4,25 +4,25 @@
 
 #define GLAD_GL_IMPLEMENTATION
 
-#include "rendering/OpenGLRenderer.h"
-#include "rendering/RenderCommand.h"
+#include <motor/rendering/OpenGLRenderer.h>
+#include <motor/rendering/RenderCommand.h>
+#include <motor/utils/Logger.h>
+#include <motor/core/ModelNode.h>
 
 #include <format>
-#include <core/ModelNode.h>
 #include "glad/gl.h"
 #include <GLFW/glfw3.h>
-#include <utils/Logger.h>
 #include <glm/glm.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
-#include "assets/AssetManager.h"
-#include "rendering/RenderPassResourceRegistry.h"
-#include "rendering/WindowManager.h"
-#include "rendering/renderpass/ShaderPass.h"
-#include "rendering/renderpass/ForwardRenderPass.h"
-#include "rendering/renderpass/CompositionPass.h"
-#include "rendering/renderpass/ShadowPass.h"
-#include "rendering/renderpass/SkyboxPass.h"
+#include <motor/assets/AssetManager.h>
+#include <motor/rendering/RenderPassResourceRegistry.h>
+#include <motor/rendering/WindowManager.h>
+#include <motor/rendering/renderpass/ShaderPass.h>
+#include <motor/rendering/renderpass/ForwardRenderPass.h>
+#include <motor/rendering/renderpass/CompositionPass.h>
+#include <motor/rendering/renderpass/ShadowPass.h>
+#include <motor/rendering/renderpass/SkyboxPass.h>
 
 using namespace Motor;
 

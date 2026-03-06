@@ -2,10 +2,10 @@
 // Created by Orik on 21/09/2025.
 //
 
-#include "assets/loaders/ShaderLoader.h"
+#include <motor/assets/loaders/ShaderLoader.h>
+#include <motor/utils/Logger.h>
 
 #include <iostream>
-#include <utils/Logger.h>
 #include <unordered_map>
 #include <fstream>
 #include <filesystem>

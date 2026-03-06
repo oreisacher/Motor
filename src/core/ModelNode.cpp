@@ -2,7 +2,7 @@
 // Created by Orik on 09/10/2025.
 //
 
-#include "core/ModelNode.h"
+#include <motor/core/ModelNode.h>
 
 using namespace Motor;
 

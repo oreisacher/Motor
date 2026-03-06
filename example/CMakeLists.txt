@@ -11,12 +11,12 @@ add_executable(Example
 
 target_include_directories(Example
     PRIVATE "include"
-    PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/../include"
 )
 
+add_subdirectory(.. MotorBuild)
+
 target_link_libraries(Example
-    PUBLIC Motor
-    PUBLIC glfw
+    PRIVATE Motor
 )
 
 # Pack all assets into benzin file

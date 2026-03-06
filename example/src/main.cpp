@@ -3,17 +3,17 @@
 //
 
 #include <random>
-#include <utils/Logger.h>
-#include <assets/AssetManager.h>
+#include <motor/utils/Logger.h>
+#include <motor/assets/AssetManager.h>
 
 #include "OrbitCamera.h"
 #include "PlayerController.h"
-#include "components/Animator.h"
-#include "core/InputManager.h"
-#include "core/ModelNode.h"
-#include "core/Time.h"
-#include "rendering/OpenGLRenderer.h"
-#include "rendering/WindowManager.h"
+#include "motor/components/Animator.h"
+#include "motor/core/InputManager.h"
+#include "motor/core/ModelNode.h"
+#include "motor/core/Time.h"
+#include "motor/rendering/OpenGLRenderer.h"
+#include "motor/rendering/WindowManager.h"
 
 using namespace Motor;
 
@@ -43,6 +43,7 @@ int main() {
     // ----------------------
     OpenGLRenderer renderer;
     renderer.init();
+    renderer.updateWindowSize(mainWindow->getWidth(), mainWindow->getHeight());
 
     mainWindow->addResizeCallback([&](Window* window, int width, int height) {
         renderer.updateWindowSize(width, height);

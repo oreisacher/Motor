@@ -2,19 +2,22 @@
 // Created by Orik on 22/09/2025.
 //
 
-#include "assets/loaders/ShaderSourceLoader.h"
+
+
+
+#include <motor/assets/loaders/ShaderSourceLoader.h>
 
 #include <fstream>
 #include <sstream>
 #include <unordered_map>
 #include <filesystem>
-#include <shaders/DefaultShader.h>
-#include <shaders/FullscreenShader.h>
-#include <shaders/SkyboxShader.h>
 
-#include "shaders/BlurShader.h"
-#include "shaders/BrightThresholdShader.h"
-#include "shaders/CompositionShader.h"
+#include <motor/shaders/DefaultShader.h>
+#include <motor/shaders/FullscreenShader.h>
+#include <motor/shaders/SkyboxShader.h>
+#include <motor/shaders/BlurShader.h>
+#include <motor/shaders/BrightThresholdShader.h>
+#include <motor/shaders/CompositionShader.h>
 
 using namespace Motor;
 

@@ -2,15 +2,15 @@
 // Created by Orik on 23/09/2025.
 //
 
-#include "assets/loaders/MaterialLoader.h"
+#include <motor/assets/loaders/MaterialLoader.h>
+#include <motor/utils/Logger.h>
+#include <motor/assets/Shader.h>
 
 #include <iostream>
-#include <utils/Logger.h>
 #include <unordered_map>
 #include <fstream>
 #include <filesystem>
 #include "nlohmann/json.hpp"
-#include <assets/Shader.h>
 
 using json = nlohmann::json;
 using namespace Motor;

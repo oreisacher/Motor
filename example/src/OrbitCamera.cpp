@@ -6,8 +6,8 @@
 
 #include <iostream>
 #include <ostream>
-#include <core/InputManager.h>
-#include <core/SceneNode.h>
+#include <motor/core/InputManager.h>
+#include <motor/core/SceneNode.h>
 #include <glm/glm.hpp>
 
 void OrbitCamera::init() {

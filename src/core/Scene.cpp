@@ -2,11 +2,9 @@
 // Created by Orik on 18/09/2025.
 //
 
-#include "core/Scene.h"
-
+#include <motor/core/Scene.h>
+#include <motor/assets/AssetManager.h>
 #include <iostream>
-
-#include "assets/AssetManager.h"
 
 using namespace Motor;
 

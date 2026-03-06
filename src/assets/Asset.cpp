@@ -4,10 +4,9 @@
 // Created by Orik on 20/09/2025.
 //
 
-#include "assets/Asset.h"
-
+#include <motor/assets/Asset.h>
 #include <random>
-#include <utils/UUIDHelper.h>
+#include <motor/utils/UUIDHelper.h>
 
 using namespace Motor;
 

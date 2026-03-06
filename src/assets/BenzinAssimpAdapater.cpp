@@ -2,11 +2,11 @@
 // Created by Orik on 09/10/2025.
 //
 
+#include <motor/assets/BenzinLoader.h>
+#include <motor/assets/BenzinAssimpAdapter.h>
+
 #include <iostream>
 #include <ostream>
-#include <assets/BenzinLoader.h>
-
-#include "assets/BenzinAssimpAdapter.h"
 
 using namespace Motor;
 

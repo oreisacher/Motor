@@ -2,7 +2,7 @@
 // Created by Orik on 22/10/2025.
 //
 
-#include "core/Time.h"
+#include <motor/core/Time.h>
 
 using namespace Motor;
 

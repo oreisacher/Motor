@@ -2,12 +2,12 @@
 // Created by Orik on 25/10/2025.
 //
 
-#include "rendering/renderpass/ShaderPass.h"
+#include <motor/rendering/renderpass/ShaderPass.h>
+#include <motor/assets/AssetManager.h>
+#include <motor/rendering/WindowManager.h>
+#include <motor/utils/ShaderUniformHelper.h>
 
-#include "assets/AssetManager.h"
 #include "glad/gl.h"
-#include "rendering/WindowManager.h"
-#include "utils/ShaderUniformHelper.h"
 
 using namespace Motor;
 

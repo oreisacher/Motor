@@ -2,15 +2,14 @@
 // Created by Orik on 18/09/2025.
 //
 
-#include "core/SceneNode.h"
-
+#include <motor/core/SceneNode.h>
 #include <format>
 #include <iostream>
 #include <ostream>
-#include <components/Component.h>
-#include <core/Scene.h>
+#include <motor/components/Component.h>
+#include <motor/core/Scene.h>
 #include <glm/gtc/matrix_transform.hpp>
-#include <utils/Logger.h>
+#include <motor/utils/Logger.h>
 
 using namespace Motor;
 

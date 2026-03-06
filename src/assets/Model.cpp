@@ -2,8 +2,8 @@
 // Created by Orik on 09/10/2025.
 //
 
-#include "assets/Model.h"
-#include "assets/ModelInstance.h"
+#include <motor/assets/Model.h>
+#include <motor/assets/ModelInstance.h>
 
 #include <ranges>
 #include <memory>

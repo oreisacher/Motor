@@ -2,13 +2,13 @@
 // Created by Orik on 23/10/2025.
 //
 
-#include "rendering/renderpass/ShadowPass.h"
+#include <motor/rendering/renderpass/ShadowPass.h>
+#include <motor/assets/AssetManager.h>
+#include <motor/assets/ModelInstance.h>
+#include <motor/utils/ShaderUniformHelper.h>
+#include <motor/rendering/OpenGLRenderer.h>
 
-#include "assets/AssetManager.h"
-#include "assets/ModelInstance.h"
 #include "glad/gl.h"
-#include "rendering/OpenGLRenderer.h"
-#include "utils/ShaderUniformHelper.h"
 #include <format>
 
 using namespace Motor;

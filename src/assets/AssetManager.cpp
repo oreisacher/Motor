@@ -2,19 +2,19 @@
 // Created by Orik on 23/09/2025.
 //
 
-#include "assets/AssetManager.h"
+#include <motor/assets/AssetManager.h>
+#include <motor/assets/Material.h>
+#include <motor/assets/Model.h>
+#include <motor/assets/ShaderSource.h>
+#include <motor/assets/Texture.h>
+#include <motor/assets/Shader.h>
+#include <motor/assets/loaders/MaterialLoader.h>
+#include <motor/assets/loaders/ModelLoader.h>
+#include <motor/assets/loaders/ShaderLoader.h>
+#include <motor/assets/loaders/ShaderSourceLoader.h>
+#include <motor/assets/loaders/TextureLoader.h>
 
 #include <fstream>
-#include <assets/Material.h>
-#include <assets/Model.h>
-#include <assets/ShaderSource.h>
-#include <assets/Texture.h>
-#include <assets/Shader.h>
-#include <assets/loaders/MaterialLoader.h>
-#include <assets/loaders/ModelLoader.h>
-#include <assets/loaders/ShaderLoader.h>
-#include <assets/loaders/ShaderSourceLoader.h>
-#include <assets/loaders/TextureLoader.h>
 
 using namespace Motor;
 

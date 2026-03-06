@@ -2,10 +2,10 @@
 // Created by Orik on 12/10/2025.
 //
 
-#include "rendering/Window.h"
+#include <motor/rendering/Window.h>
+#include <motor/utils/Logger.h>
 
 #include <format>
-#include <utils/Logger.h>
 #include <GLFW/glfw3.h>
 
 using namespace Motor;

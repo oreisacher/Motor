@@ -2,12 +2,11 @@
 // Created by Orik on 16/10/2025.
 //
 
-#include "rendering/GPUResourceManager.h"
+#include <motor/rendering/GPUResourceManager.h>
+#include <motor/assets/Mesh.h>
 
 #include <format>
-#include <assets/Mesh.h>
 #include <glad/gl.h>
-
 #include "glm/gtc/type_ptr.hpp"
 
 using namespace Motor;

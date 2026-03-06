@@ -2,9 +2,9 @@
 // Created by Orik on 12/10/2025.
 //
 
-#include "rendering/WindowManager.h"
+#include <motor/rendering/WindowManager.h>
+#include <motor/utils/Logger.h>
 #include <format>
-#include <utils/Logger.h>
 #include <GLFW/glfw3.h>
 
 using namespace Motor;

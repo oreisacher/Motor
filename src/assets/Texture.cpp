@@ -2,9 +2,8 @@
 // Created by Orik on 20/09/2025.
 //
 
-#include "assets/Texture.h"
+#include <motor/assets/Texture.h>
 #include "stb_image.h"
-#include <iostream>
 
 using namespace Motor;
 

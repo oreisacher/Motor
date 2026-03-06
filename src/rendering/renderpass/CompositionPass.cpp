@@ -2,13 +2,13 @@
 // Created by Orik on 25/10/2025.
 //
 
-#include "rendering/renderpass/CompositionPass.h"
+#include <motor/rendering/renderpass/CompositionPass.h>
+#include <motor/assets/AssetManager.h>
+#include <motor/rendering/WindowManager.h>
+#include <motor/utils/ShaderUniformHelper.h>
 
-#include "assets/AssetManager.h"
 #include "glad/gl.h"
 #include "GLFW/glfw3.h"
-#include "rendering/WindowManager.h"
-#include "utils/ShaderUniformHelper.h"
 
 using namespace Motor;
 

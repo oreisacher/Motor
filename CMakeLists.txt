@@ -35,6 +35,3 @@ add_subdirectory("external/json")
 add_subdirectory("external/zstd/build/cmake")
 
 add_subdirectory("src")
-
-# Example
-add_subdirectory("example")

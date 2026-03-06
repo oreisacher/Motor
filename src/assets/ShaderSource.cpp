@@ -2,7 +2,7 @@
 // Created by Orik on 22/09/2025.
 //
 
-#include "assets/ShaderSource.h"
+#include <motor/assets/ShaderSource.h>
 
 using namespace Motor;
 

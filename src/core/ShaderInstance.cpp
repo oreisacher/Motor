@@ -1,4 +1,4 @@
-#include "core/ShaderInstance.h"
+#include <motor/core/ShaderInstance.h>
 
 using namespace Motor;
 

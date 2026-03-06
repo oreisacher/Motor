@@ -2,8 +2,8 @@
 // Created by Orik on 20/10/2025.
 //
 
+#include <motor/assets/Animation.h>
 #include <utility>
-#include "assets/Animation.h"
 
 using namespace Motor;
 

@@ -6,7 +6,7 @@
 #define PROJECT_ORBITCAMERA_H
 
 #include <utility>
-#include <components/Component.h>
+#include <motor/components/Component.h>
 
 class OrbitCamera : public Motor::Component {
 public:

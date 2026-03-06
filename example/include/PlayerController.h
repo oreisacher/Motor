@@ -5,8 +5,8 @@
 #ifndef PROJECT_PLAYERCONTROLLER_H
 #define PROJECT_PLAYERCONTROLLER_H
 
-#include <components/Animator.h>
-#include <components/Component.h>
+#include <motor/components/Animator.h>
+#include <motor/components/Component.h>
 
 class PlayerController : public Motor::Component {
 public:
